@@ -1,0 +1,68 @@
+header{
+    font-family: 'Lobster', cursive;
+}
+
+body{
+	background-color:green;
+}
+/* 
+body{
+    font-family: 'Dancing Script', cursive;
+} */
+
+#stripe{
+    background-color: white;
+    /* text-align: center; */
+    height:40px;
+}
+
+.selected{
+    background-color: #343a40;
+    color:white;
+}
+
+#input-word{
+    width:70%;
+}
+button{
+    background: none;
+    border:none;
+    text-transform: uppercase;
+    height:40px;
+    color:#343a40;
+    letter-spacing: 1px;
+    font-size: 1.1rem;
+    font-weight: 550;
+    
+    
+    
+}
+
+button:hover{
+    background-color: #343a40;
+    color: white;
+}
+
+.me{
+    background: url("https://api.sololearn.com/Uploads/Avatars/12876414.jpg")no-repeat center/contain;
+     
+    width: 60px;
+    height: 60px;
+    bottom: 35px;
+    right: 16px;
+    display: block;
+    position: fixed;
+    z-index: 9999;
+    border-radius: 50%;
+    animation: me 2s linear infinite alternate;
+}
+
+@keyframes me{
+    from{
+        transform: translateY(-7px)
+    }
+
+    to{
+        transform: translateY(7px)
+    }
+}
