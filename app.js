@@ -31,9 +31,12 @@ passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
 
+
 app.get("/",function(req,res){
 	res.render("landing");
 })
+
+
 
 app.get("/game",isLoggedIn,function(req,res){
 	res.render("index");
@@ -46,6 +49,8 @@ app.get("/game",isLoggedIn,function(req,res){
 app.get("/register", function(req, res){
    res.render("register"); 
 });
+
+
 //handle sign up logic
 app.post("/register", function(req, res){
     var newUser = new User({username: req.body.username});
@@ -60,10 +65,14 @@ app.post("/register", function(req, res){
     });
 });
 
+
+
 // show login form
 app.get("/login", function(req, res){
    res.render("login"); 
 });
+
+
 // handling login logic
 app.post("/login", passport.authenticate("local", 
     {
@@ -72,11 +81,14 @@ app.post("/login", passport.authenticate("local",
     }), function(req, res){
 });
 
+
+
 // logic route
 app.get("/logout", function(req, res){
    req.logout();
    res.redirect("/login");
 });
+
 
 
 function isLoggedIn(req, res, next){
