@@ -6,6 +6,7 @@ var passport    = require("passport");
 var LocalStrategy = require("passport-local");
 var User        = require("./models/user");
 var passportLocalMongoose = require("passport-local-mongoose");
+var flash = require("connect-flash");
 
 mongoose.connect("mongodb://localhost/beatword",{
 	useNewUrlParser:true,
@@ -19,6 +20,7 @@ app.use(express.static(__dirname + "/public"));
 
 app.set("view engine", "ejs");
 
+
 app.use(require("express-session")({
     secret: "Once again Rusty wins cutest dog!",
     resave: false,
@@ -29,6 +31,14 @@ app.use(passport.session());
 passport.use(new LocalStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
+
+app.use(flash());
+app.use(function(req, res, next){
+   res.locals.currentUser = req.user;
+	res.locals.error = req.flash("error");
+	res.locals.success = req.flash("success");
+   next();
+});
 
 
 
@@ -57,7 +67,8 @@ app.post("/register", function(req, res){
     User.register(newUser, req.body.password, function(err, user){
         if(err){
             console.log(err);
-            return res.render("register");
+			req.flash("error",err.message);
+            return res.redirect("/register");
         }
         passport.authenticate("local")(req, res, function(){
            res.redirect("/game"); 
@@ -77,7 +88,8 @@ app.get("/login", function(req, res){
 app.post("/login", passport.authenticate("local", 
     {
         successRedirect: "/game",
-        failureRedirect: "/login"
+        failureRedirect: "/login",
+	    failureFlash: true
     }), function(req, res){
 });
 

@@ -7,8 +7,8 @@
         115deg,
         rgba(60, 64, 62, 0.8),
         rgba(60, 60, 60, 0.7)
-      ); */
-	  background-image: url(https://p4.wallpaperbetter.com/wallpaper/274/429/271/black-computer-desktop-electronic-wallpaper-preview.jpg);
+      );  */
+	  background-image: url(https://p4.wallpaperbetter.com/wallpaper/274/429/271/black-computer-desktop-electronic-wallpaper-preview.jpg); 
 	  background-size: cover;
       
       background-repeat: no-repeat;
@@ -31,6 +31,28 @@ a:hover{
 
 .pagecontent{
 	margin-top:70px;
+}
+
+
+
+.error-flash{
+	border:2px solid red;
+	border-radius:15px;
+	color:white;
+	padding:10px;
+	margin:0 auto;
+	width:500px;
+	font-weight:bold;
+}
+
+
+
+.success-flash{
+	border:1px solid green;
+	color:white;
+	padding:10px;
+	width:400px;
+	margin:0 auto;
 }
 
 

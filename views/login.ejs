@@ -1,4 +1,4 @@
- 
+
  
  
  <!DOCTYPE html>
@@ -38,7 +38,31 @@
 	  <h1 class="gamename text-center">WordBeater</h1>
      </div>
 	
+
+		
+		
+	
+	
+	
+	
 	<div class="pagecontent">
+		
+		<div class="message">
+					<% if(error && error.length>0) { %>
+   <div class="error-flash text-center">
+	      <%=error %>   
+		</div>
+			 <% }  %>
+			
+			<% if(success && success.length>0) { %>
+	<div class="success-flash">
+	      <%=success %>   
+		</div>
+    			
+			<% } %>
+		</div>
+	
+		
 		<h3 class="title text-center">Log In</h3>
 	
 		<hr id="line">

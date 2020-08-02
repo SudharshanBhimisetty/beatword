@@ -16,10 +16,14 @@
                     <span id = "level">
                       <button class="buttons" id = "hard-game">Hard</button>
                       <button class="buttons selected" id = "easy-game">Easy</button>
-                    </span>  
-                </div>
-            </div>
- 
+                    </span> 
+				 </div>
+				<span id="auth">
+				<button class="currentuser">Signed in as <%= currentUser.username %></button>	
+				<a href="/logout"><button class="authbutton">Logout</button></a>
+				</span>
+
+			 </div>
 
            <div class="row">
             <div class="col-md-6 mx-auto">
