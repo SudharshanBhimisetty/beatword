@@ -8,10 +8,15 @@ var User        = require("./models/user");
 var passportLocalMongoose = require("passport-local-mongoose");
 var flash = require("connect-flash");
 
-mongoose.connect("mongodb://localhost/beatword",{
+
+
+var url = process.env.DATABASEURL ||"mongodb://localhost/beatword" ;
+
+mongoose.connect(url,{
 	useNewUrlParser:true,
 	useUnifiedTopology:true,
 });
+
 
 app.use(bodyParser.urlencoded({extended: true}));
 
