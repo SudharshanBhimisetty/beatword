@@ -1,11 +1,95 @@
-<%- include("partials/header") %>
+ 
+ 
+ 
+ <!DOCTYPE html>
+<html lan="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Word Beater</title>
+		
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		
+        <link rel = "stylesheet" href="/stylesheets/forms.css">
+		
+        <link href="https://fonts.googleapis.com/css2?family=Recursive:wght@500&family=Dancing+Script&family=Lobster&display=swap" rel="stylesheet">
+		
+		
+		<style>
+			body{
+				background-image:url(https://wallpaperaccess.com/full/279547.jpg);
+			}
+		</style>
+		
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script> 
+    </head>
 
-<h1>Login!</h1>
+<body>
+
+
+
+
+
+
+
+
+	<div class="heading">
+	  <h1 class="gamename text-center">WordBeater</h1>
+     </div>
+	
+	<div class="pagecontent">
+		<h3 class="title text-center">Log In</h3>
+	
+		<hr id="line">
+    <form  class="mx-auto" id="survey-form"   action="/login" method="post">
+     
+      <div class="form-group">
+        <label id="name-label" for="name">Name</label>
+        <input type="text" name="username" id="name" class="form-control" placeholder="Username" required/>
+      </div> 
+		
+      <div class="form-group">
+        <label id="password-label" for="password">Password</label>
+        <input type="password" name="password" id="password" class="form-control" placeholder="Password" required/>
+      </div>	
+		
+	  <div class="form-group">
+        <button class="btn btn-outline-dark"> Log In </button>
+      </div>	
+		</form>
+		
+		<div class="text-center footer">
+			Don't have an account,then <a href="/register">SignUp</a> here
+		</div>
+		
+	</div>
+
+
+	
+
+	
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<h1>Login!</h1>
 <form action="/login" method="POST">
     <input type="text" name="username" placeholder="username">
     <input type="password" name="password" placeholder="password">
     <input type="submit" value="Login!">
-</form>
+</form> -->
 
-<%- include("partials/footer") %>
+
 
