@@ -34,9 +34,52 @@ button{
     font-weight: 550;    
 }
 
+@media only screen and (min-width: 1086px) {
+
 #auth{
 	position:absolute;
 	right:0;
+}  
+}
+
+
+
+@media only screen and (max-width: 1086px) {
+
+#auth{
+	display:none;
+}  
+}
+
+
+
+@media only screen and (min-width: 1086px) {
+
+#authr{
+	display:none;
+}  
+}
+
+
+
+@media only screen and (max-width: 1086px) {
+
+#authr{
+	
+}  
+
+	p{
+		font-size:1.2rem;
+	}	
+	
+	.authbuttonr{
+		color:white;
+	}
+	
+	.authbuttonr:hover{
+		color:steelblue;
+	}	
+	
 }
 
 button:hover{
@@ -58,7 +101,7 @@ button:hover{
 	color:#343a40
 }
 
-.me{
+/*.me{
     background: url("https://api.sololearn.com/Uploads/Avatars/12876414.jpg")no-repeat center/contain;
      
     width: 60px;
@@ -80,4 +123,4 @@ button:hover{
     to{
         transform: translateY(7px)
     }
-}
+} */

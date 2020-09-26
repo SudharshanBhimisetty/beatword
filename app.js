@@ -1,3 +1,7 @@
+// require("dotenv").config();
+
+
+
 var express = require("express");
 var app = express();
 var bodyParser  = require("body-parser");
@@ -7,7 +11,6 @@ var LocalStrategy = require("passport-local");
 var User        = require("./models/user");
 var passportLocalMongoose = require("passport-local-mongoose");
 var flash = require("connect-flash");
-
 
 
 var url = process.env.DATABASEURL ||"mongodb://localhost/beatword" ;
@@ -25,6 +28,7 @@ app.use(express.static(__dirname + "/public"));
 
 app.set("view engine", "ejs");
 
+app.locals.randomWords = require('random-words');
 
 app.use(require("express-session")({
     secret: "Once again Rusty wins cutest dog!",

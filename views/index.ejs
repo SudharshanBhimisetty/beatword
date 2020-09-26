@@ -51,6 +51,15 @@
                <h5>High Score: <span id="high-score">0</span></h5>    
             </div>
         </div>
+				
+        <div class="row mt-5" id="authr">
+            <div class="col-md-6">
+				<p>Signed in as <%= currentUser.username %></p>
+            </div>
+            <div class="col-md-6">
+              <a href="/logout"><button class="authbuttonr">Logout</button></a>
+            </div>
+        </div>				
 
 <!--         <div>
             <h5>Previous Game Score: <span id="previous-score">0</span></h5>
@@ -64,8 +73,11 @@
                 <p>Type each word in the given amount of seconds to score.</p>
               </div>
             </div>
+	
+			
           </div>
 
+				
         <div class="row">
             <div class="col-md-6 mt-4 mx-auto">Made-By Siddu</div>
         </div>
